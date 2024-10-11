@@ -18,12 +18,13 @@ app.title = "Dashboard energia"
 server = app.server
 app.config.suppress_callback_exceptions = True
 
-print('hola')
+
 # Load data from csv
 def load_data(file_path):
     # To do: Completar la función 
     # Cargar el archivo CSV
     df = pd.read_csv(file_path)
+    
     
     # Convertir la primera columna a formato fecha
     df.iloc[:, 0] = pd.to_datetime(df.iloc[:, 0])
